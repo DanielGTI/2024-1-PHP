@@ -3,7 +3,13 @@
 	function sortear_Megasena(){
 		$numeros = array();
 		for($i = 0; $i < 6; $i++){
-			$numeros[$i] = rand(1,60);
+			$numero = rand(1,60);
+			if( $i > 0 && in_array($numero, $numeros) ){
+				$i--;
+			}else{
+				$numeros[$i] = $numero;
+			}
+				
 		}
 		sort($numeros);
 		return $numeros;
