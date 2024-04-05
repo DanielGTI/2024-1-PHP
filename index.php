@@ -1,6 +1,3 @@
-
-
-
 <?php 
 
 	function sortear_Megasena(){
@@ -16,8 +13,8 @@
 		echo "Os números sorteados são: ";
 		for($i = 0; $i < 6; $i++){
 			echo $numeros[$i]; 
-				if( $i != 5)
-					echo " - ";
+			if( $i != 5)
+				echo " - ";
 		}
 		echo "<br><br>";
 	}
@@ -35,10 +32,8 @@
 		$acerto = 0;
 		for($i = 0; $i < 6; $i++){
 			for($j = $i; $j < $n; $j++){
-
 				if( $numero_Usuario[$j] == $numeros_Sorteados[$i] ){
 					$acerto++;
-
 				}
 			}
 		}
